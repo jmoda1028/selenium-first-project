@@ -41,7 +41,8 @@ public class HomePage {
     By switchWindowLabel = By.xpath("//div[@class='left-align']/fieldset/legend[contains(text(),'Switch Window Example')]");
     By switchWindowBtn = By.cssSelector("button[id='openwindow']");
 
-
+    //switch tab elements
+    By switchTabBtn = By.cssSelector("a[id='opentab']");
 
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -126,4 +127,6 @@ public class HomePage {
     public WebElement getSwitchWindowLabel() { return driver.findElement(switchWindowLabel); }
 
     public WebElement getSwitchWindowBtn() { return driver.findElement(switchWindowBtn); }
+
+    public WebElement getSwitchTabBtn() { return driver.findElement(switchTabBtn); }
 }

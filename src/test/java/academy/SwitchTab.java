@@ -1,7 +1,6 @@
 package academy;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WindowType;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -10,10 +9,9 @@ import pageObjects.HomePage;
 import resources.base;
 
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Set;
+import java.util.ArrayList;
 
-public class SwitchWindow extends base {
+public class SwitchTab extends base {
 
     public WebDriver driver;
 
@@ -26,41 +24,38 @@ public class SwitchWindow extends base {
 
     }
 
-//    @Test
-//    public void validateSwitchWindowLabel() {
-//
-//        HomePage h = new HomePage(driver);
-//
-//        h.getSwitchWindowLabel().isDisplayed();
-//        Assert.assertEquals(h.getSwitchWindowLabel().getText(), "Switch Window Example");
-//    }
-
     @Test
     public void validateSwitchWindowButton() {
 
         HomePage h = new HomePage(driver);
 
-        h.getSwitchWindowBtn().click();
-        Object[] windowHandles=driver.getWindowHandles().toArray();
-        //switch to child window
-        driver.switchTo().window((String) windowHandles[1]);
-        //assert on title of new window
+        h.getSwitchTabBtn().click();
+        ArrayList<String> tabs = new ArrayList<String> (driver.getWindowHandles());
+        driver.switchTo().window(tabs.get(1));
         String nwUrl = driver.getCurrentUrl();
         Assert.assertEquals(nwUrl, "https://www.qaclickacademy.com/" );
         System.out.println(nwUrl);
-        driver.close();
-
-        //switch back to parent window
-        driver.switchTo().window((String) windowHandles[0]);
+//        driver.close();
+        driver.switchTo().window(tabs.get(0));
         String nwUrl2 = driver.getCurrentUrl();
         Assert.assertEquals(nwUrl2, "https://rahulshettyacademy.com/AutomationPractice/");
         System.out.println(nwUrl2);
+
+        //switch to new tab and then close it
+        driver.switchTo().window(tabs.get(1));
+        driver.close();
+
+        //active the old tab
+        driver.switchTo().window(tabs.get(0));
+        String nwUrl3 = driver.getCurrentUrl();
+        Assert.assertEquals(nwUrl3, "https://rahulshettyacademy.com/AutomationPractice/");
+        System.out.println(nwUrl3);
     }
 
     @AfterTest
     public void teardown() {
         driver.close();
     }
-
-
 }
+
+

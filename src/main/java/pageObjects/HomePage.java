@@ -44,6 +44,15 @@ public class HomePage {
     //switch tab elements
     By switchTabBtn = By.cssSelector("a[id='opentab']");
 
+    //Alert elements
+    By alertInputBox = By.cssSelector("input[name='enter-name']");
+    By btnAlert = By.cssSelector("input[id='alertbtn']");
+    By confirmAlert = By.cssSelector("input[id='confirmbtn']");
+
+    //table
+    By tableProduct = By.xpath("(//table[@id='product'])[1]");
+    By courses = By.xpath("(//table[@id='product'])[1]//td[2]");
+
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
 
@@ -129,4 +138,10 @@ public class HomePage {
     public WebElement getSwitchWindowBtn() { return driver.findElement(switchWindowBtn); }
 
     public WebElement getSwitchTabBtn() { return driver.findElement(switchTabBtn); }
+
+    public WebElement getAlertInputBox() { return driver.findElement(alertInputBox); }
+
+    public WebElement getBtnAlert() { return driver.findElement(btnAlert); }
+
+    public WebElement getConfirmAlert() { return driver.findElement(confirmAlert); }
 }

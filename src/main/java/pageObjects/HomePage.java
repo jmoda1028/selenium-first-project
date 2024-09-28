@@ -51,7 +51,7 @@ public class HomePage {
 
     //table
     By tableProduct = By.xpath("(//table[@id='product'])[1]");
-    By courses = By.xpath("(//table[@id='product'])[1]//td[2]");
+    By  courseList = By.xpath("(//table[@id='product'])[1]//td[3]");
 
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
@@ -144,4 +144,8 @@ public class HomePage {
     public WebElement getBtnAlert() { return driver.findElement(btnAlert); }
 
     public WebElement getConfirmAlert() { return driver.findElement(confirmAlert); }
+
+    public WebElement getTableProduct() { return driver.findElement(tableProduct); }
+
+    public WebElement getCourseList() { return (WebElement) driver.findElements(courseList); }
 }

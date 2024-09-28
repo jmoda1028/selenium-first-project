@@ -53,6 +53,11 @@ public class HomePage {
     By tableProduct = By.xpath("(//table[@id='product'])[1]");
     By  courseList = By.xpath("(//table[@id='product'])[1]//td[3]");
 
+    //hide & show
+    By btnHide = By.cssSelector("input[id='hide-textbox']");
+    By btnShow = By.cssSelector("input[id='show-textbox']");
+    By inputBoxShowHide = By.cssSelector("input[id='displayed-text']");
+
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
 
@@ -148,4 +153,10 @@ public class HomePage {
     public WebElement getTableProduct() { return driver.findElement(tableProduct); }
 
     public WebElement getCourseList() { return (WebElement) driver.findElements(courseList); }
+
+    public WebElement getBtnHide() { return (WebElement) driver.findElement(btnHide); }
+
+    public WebElement getBtnShow() { return (WebElement) driver.findElement(btnShow); }
+
+    public WebElement getInputBoxShowHide() { return (WebElement) driver.findElement(inputBoxShowHide); }
 }

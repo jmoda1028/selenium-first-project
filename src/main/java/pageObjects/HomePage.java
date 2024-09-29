@@ -61,6 +61,12 @@ public class HomePage {
     //tableFixHead
     By tableFix = By.xpath("//div[@class='tableFixHead']");
 
+    //mouse hover
+    By btnMouseHover = By.cssSelector("button[id='mousehover']");
+    By panelMouseHover = By.cssSelector("div[class=\"mouse-hover-content\"]");
+    By btnAnchorChild1 = By.cssSelector("div[class=\"mouse-hover-content\"] > a:nth-child(1)");
+    By btnAnchorChild2 = By.cssSelector("div[class=\"mouse-hover-content\"] > a:nth-child(2)");
+
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
 
@@ -164,4 +170,12 @@ public class HomePage {
     public WebElement getInputBoxShowHide() { return driver.findElement(inputBoxShowHide); }
 
     public WebElement getTableFix() { return  driver.findElement(tableFix); }
+
+    public WebElement getBtnMouseHover() { return  driver.findElement(btnMouseHover); }
+
+    public WebElement getPanelMouseHover() { return  driver.findElement(panelMouseHover); }
+
+    public WebElement getBtnAnchorChild1() { return  driver.findElement(btnAnchorChild1); }
+
+    public WebElement getBtnAnchorChild2() { return  driver.findElement(btnAnchorChild2); }
 }

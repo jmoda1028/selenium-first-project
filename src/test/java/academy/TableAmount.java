@@ -87,8 +87,8 @@ public class TableAmount extends base {
 
         Assert.assertEquals(actualTotalInteger, totalAmount);
 
-        System.out.println("actual total " + formattedName);
-        System.out.println("expected total " + totalAmount);
+//        System.out.println("actual total " + formattedName);
+//        System.out.println("expected total " + totalAmount);
     }
 
     @AfterTest

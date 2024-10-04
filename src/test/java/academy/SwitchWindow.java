@@ -62,5 +62,4 @@ public class SwitchWindow extends base {
         driver.close();
     }
 
-
 }

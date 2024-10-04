@@ -67,6 +67,10 @@ public class HomePage {
     By btnAnchorChild1 = By.cssSelector("div[class=\"mouse-hover-content\"] > a:nth-child(1)");
     By btnAnchorChild2 = By.cssSelector("div[class=\"mouse-hover-content\"] > a:nth-child(2)");
 
+    // iframe
+    By iframeCourses = By.cssSelector("iframe[id='courses-iframe']");
+    By priceTitle = By.cssSelector("div[class='price-title'] h2");
+
     public HomePage(WebDriver driver) {
         // TODO Auto-generated constructor stub
 
@@ -178,4 +182,8 @@ public class HomePage {
     public WebElement getBtnAnchorChild1() { return  driver.findElement(btnAnchorChild1); }
 
     public WebElement getBtnAnchorChild2() { return  driver.findElement(btnAnchorChild2); }
+
+    public WebElement getIframeCourses() { return  driver.findElement(iframeCourses); }
+
+    public WebElement getPriceTitle() { return  driver.findElement(priceTitle); }
 }

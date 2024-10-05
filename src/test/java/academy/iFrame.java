@@ -2,6 +2,7 @@ package academy;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
@@ -38,5 +39,10 @@ public class iFrame extends base {
         String pageTitle = h.getTitle().getText();
         Assert.assertEquals(pageTitle, "Practice Page");
 //        System.out.println(pageTitle);
+    }
+
+    @AfterTest
+    public void teardown() {
+        driver.close();
     }
 }

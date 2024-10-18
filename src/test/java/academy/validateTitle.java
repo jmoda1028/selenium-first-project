@@ -31,6 +31,7 @@ public class validateTitle extends base {
         //compare the text from the browser with actual text.- Error..
 
         Assert.assertEquals(h.getTitle().getText(), "Practice Page");
+        log.info("title matched");
     }
 
     @AfterTest

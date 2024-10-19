@@ -1,1 +1,4 @@
-10:02:03.951 [main] INFO  resources.base - title matched
+15:25:21.566 [main] INFO  resources.base - Browser chrome started.
+15:25:29.779 [main] INFO  academy.HideShow - css value matched
+15:25:29.893 [main] INFO  resources.base - Browser chrome started.
+15:25:37.458 [main] INFO  academy.validateTitle - title matched

@@ -1,0 +1,8 @@
+15:24:07.836 [main] INFO  resources.base - Browser chrome started.
+15:24:17.043 [main] INFO  academy.CheckBox - checkbox value matched
+15:24:18.374 [main] INFO  resources.base - Browser chrome started.
+15:24:26.046 [main] INFO  academy.HideShow - css value matched
+15:24:26.171 [main] INFO  resources.base - Browser chrome started.
+15:24:33.204 [main] INFO  academy.validateTitle - title matched
+15:25:13.659 [main] INFO  resources.base - Browser chrome started.
+15:25:20.228 [main] INFO  academy.CheckBox - checkbox value matched

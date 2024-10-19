@@ -2,9 +2,7 @@ package academy;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -14,7 +12,7 @@ public class RadioButtons extends base {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException
     {
 
@@ -43,7 +41,7 @@ public class RadioButtons extends base {
         h.getRadioBtn3().click();
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown()
     {
         driver.close();

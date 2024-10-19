@@ -1,7 +1,11 @@
 package academy;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pageObjects.HomePage;
@@ -12,8 +16,9 @@ import java.io.IOException;
 public class HideShow extends base {
 
     public WebDriver driver;
+    public static Logger log = LogManager.getLogger(HideShow.class.getName());
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -33,5 +38,11 @@ public class HideShow extends base {
         String inputShow = h.getInputBoxShowHide().getCssValue("display");
 //        System.out.println(inputShow);
         Assert.assertEquals(inputShow, "block");
+        log.info("css value matched");
+    }
+
+    @AfterClass
+    public void teardown() {
+        driver.close();
     }
 }

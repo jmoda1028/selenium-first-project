@@ -2,9 +2,7 @@ package academy;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -14,7 +12,7 @@ public class iFrame extends base {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -41,7 +39,7 @@ public class iFrame extends base {
 //        System.out.println(pageTitle);
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown() {
         driver.close();
     }

@@ -5,9 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 import java.io.File;
@@ -17,7 +15,7 @@ public class screenShot extends base {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -48,7 +46,7 @@ public class screenShot extends base {
         FileUtils.copyFile(file, new File(System.getProperty("user.dir") + "\\src\\main\\resources\\screenshots\\element-screenshot.png"));
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown() {
         driver.close();
     }

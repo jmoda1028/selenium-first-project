@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -17,7 +15,7 @@ public class SelectSuggestion extends base {
 
     private WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException
     {
 
@@ -49,7 +47,7 @@ public class SelectSuggestion extends base {
 
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown()
     {
         driver.close();

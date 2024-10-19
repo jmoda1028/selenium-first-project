@@ -3,31 +3,31 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Latifa/IdeaProjects/selenium-first-project">
         <classes>
-<!--            <class name="academy.AlertButton" />-->
+            <class name="academy.AlertButton" />
 
-<!--            <class name="academy.CheckBox" />-->
+            <class name="academy.CheckBox" />
 
-<!--            <class name="academy.DropdownMenu" />-->
+            <class name="academy.DropdownMenu" />
 
-<!--            <class name="academy.GridTable" />-->
+            <class name="academy.GridTable" />
 
-<!--            <class name="academy.HideShow" />-->
+            <class name="academy.HideShow" />
 
-<!--            <class name="academy.MouseHover" />-->
+            <class name="academy.MouseHover" />
 
-<!--            <class name="academy.RadioButtons" />-->
+            <class name="academy.RadioButtons" />
 
-<!--            <class name="academy.SelectSuggestion" />-->
+            <class name="academy.SelectSuggestion" />
 
-<!--            <class name="academy.SwitchTab" />-->
+            <class name="academy.SwitchTab" />
 
-<!--            <class name="academy.SwitchWindow" />-->
+            <class name="academy.SwitchWindow" />
 
-<!--            <class name="academy.TableAmount" />-->
+            <class name="academy.TableAmount" />
 
-<!--            <class name="academy.iFrame" />-->
+            <class name="academy.iFrame" />
 
-<!--            <class name="academy.screenShot" />-->
+            <class name="academy.screenShot" />
 
             <class name="academy.validateTitle" />
 

@@ -3,9 +3,7 @@ package academy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -17,7 +15,7 @@ public class SwitchWindow extends base {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -57,7 +55,7 @@ public class SwitchWindow extends base {
         System.out.println(nwUrl2);
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown() {
         driver.close();
     }

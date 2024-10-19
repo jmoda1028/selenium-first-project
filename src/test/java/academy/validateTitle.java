@@ -2,18 +2,20 @@ package academy;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
 public class validateTitle extends base {
+
+    public static Logger log = LogManager.getLogger(validateTitle.class.getName());
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException
     {
 
@@ -34,7 +36,7 @@ public class validateTitle extends base {
         log.info("title matched");
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown()
     {
         driver.close();

@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -19,7 +17,7 @@ public class GridTable extends base {
 
     public WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -62,7 +60,7 @@ public class GridTable extends base {
         // Assert that the actual list matches the expected list
         Assert.assertEquals(courseColumnTexts, expectedCourseColumnTexts, "The list of texts does not match the expected values.");
     }
-    @AfterTest
+    @AfterClass
     public void teardown() {
         driver.close();
     }

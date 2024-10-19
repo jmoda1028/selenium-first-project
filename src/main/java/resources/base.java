@@ -28,6 +28,7 @@ public class base {
 
         prop.load(fis);
         String browserName=prop.getProperty("browser");
+        log.info("Browser "+browserName+" started.");
 //        System.out.println(browserName);
 
         if(browserName.equals("chrome"))

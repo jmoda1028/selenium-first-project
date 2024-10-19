@@ -1,11 +1,11 @@
 package academy;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pageObjects.HomePage;
 import resources.base;
 
@@ -14,8 +14,9 @@ import java.io.IOException;
 public class CheckBox extends base {
 
     public WebDriver driver;
+    public static Logger log = LogManager.getLogger(CheckBox.class.getName());
 
-    @BeforeTest
+    @BeforeClass
     public void initialize() throws IOException {
 
         driver = initializeDriver();
@@ -70,6 +71,7 @@ public class CheckBox extends base {
         //get the value of attribute value
         String cbv1 = h.getCheckBox1().getAttribute("value");
         Assert.assertEquals(cbv1, "option1");
+        log.info("checkbox value matched");
 
         String cbv2 = h.getCheckBox2().getAttribute("value");
         Assert.assertEquals(cbv2, "option2");
@@ -87,7 +89,7 @@ public class CheckBox extends base {
         h.getCheckBox3().isSelected();
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown() {
         driver.close();
     }
